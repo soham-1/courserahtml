@@ -152,9 +152,46 @@ body {
   opacity: .8;
 }
 /* END HOME PAGE */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;margin-top: 15px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #a88989;
+  height: fit-content;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 /* MENU CATEGORIES PAGE */
-.category-tile { 
+.category-tile {
   position: relative;
   border: 2px solid #3F0C1F;
   overflow: hidden;
@@ -201,7 +238,7 @@ body {
 }
 .menu-item-photo {
   position: relative;
-  border: 2px solid #3F0C1F; 
+  border: 2px solid #3F0C1F;
   overflow: hidden;
   padding: 0;
   margin-right: -15px;
@@ -354,7 +391,7 @@ h3.menu-item-title {
     font-size: 6vw;
   }
   /* End Header */
-  
+
   /* Home page */
   #menu-tile, #specials-tile {
     width: 280px;
@@ -370,6 +407,3 @@ h3.menu-item-title {
     width: 100%;
   }
 }
-
-
-
